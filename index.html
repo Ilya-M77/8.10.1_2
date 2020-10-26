@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body>
+    <form action="#">
+      <label>
+        Текст
+        <input id="text" type="text" placeholder="Введите текст" />
+      </label>
+      <button id="submit" type="submit">Нажми меня</button>
+    </form>
+    <script>
+        //Задание 8.10.1
+      let input = document.querySelector("input");
+      input.addEventListener("keyup", (event) => {
+        event.stopPropagation();
+        let inputValue = event.target.value;
+        console.log(inputValue);
+      });
+      //Задание 8.10.2
+      submit.onclick = function () {
+        let textInput = document.querySelector("#text").value;
+        alert('Спасибо за нажатие на нашу замечательную кнопку. Значение вашего поля — ' + textInput.toUpperCase()+ '!');
+      };
+    </script>
+  </body>
+</html>
