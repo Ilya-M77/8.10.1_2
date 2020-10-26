@@ -24,6 +24,7 @@
       //Задание 8.10.2
       submit.onclick = function () {
         let textInput = document.querySelector("#text").value;
+        event.preventDefault()
         alert('Спасибо за нажатие на нашу замечательную кнопку. Значение вашего поля — ' + textInput.toUpperCase()+ '!');
       };
     </script>
